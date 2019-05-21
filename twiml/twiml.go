@@ -33,8 +33,11 @@ func (r *Response) Action(structs ...interface{}) error {
 
 // Dial appends dial action verb and noun structs to respose
 // Valid verb: Dial. Valid nouns: Client, Conference, Number, Queue, Sip
-func (r *Response) Dial(structs ...interface{}) error {
-	d := Dial{}
+func (r *Response) Dial(dial *Dial, structs ...interface{}) error {
+	d := dial
+	if d == nil {
+		d = &Dial{}
+	}
 
 	for _, s := range structs {
 		switch s := s.(type) {
