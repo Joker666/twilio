@@ -63,11 +63,13 @@ type Message struct {
 }
 
 type Number struct {
-	XMLName    xml.Name `xml:"Number"`
-	SendDigits string   `xml:"sendDigits,attr,omitempty"`
-	Url        string   `xml:"url,attr,omitempty"`
-	Method     string   `xml:"method,attr,omitempty"`
-	Number     string   `xml:",chardata"`
+	XMLName             xml.Name `xml:"Number"`
+	SendDigits          string   `xml:"sendDigits,attr,omitempty"`
+	Url                 string   `xml:"url,attr,omitempty"`
+	Method              string   `xml:"method,attr,omitempty"`
+	Number              string   `xml:",chardata"`
+	StatusCallback      string   `xml:"statusCallback,attr,omitempty"`
+	StatusCallbackEvent string   `xml:"statusCallbackEvent,attr,omitempty"`
 }
 
 type Pause struct {
