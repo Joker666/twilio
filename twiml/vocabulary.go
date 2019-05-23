@@ -3,10 +3,12 @@ package twiml
 import "encoding/xml"
 
 type Client struct {
-	XMLName xml.Name `xml:"Client"`
-	Method  string   `xml:"method,attr,omitempty"`
-	Url     string   `xml:"URL,omitempty"`
-	Name    string   `xml:",chardata"`
+	XMLName             xml.Name `xml:"Client"`
+	Method              string   `xml:"method,attr,omitempty"`
+	Url                 string   `xml:"URL,omitempty"`
+	Name                string   `xml:",chardata"`
+	StatusCallback      string   `xml:"statusCallback,attr,omitempty"`
+	StatusCallbackEvent string   `xml:"statusCallbackEvent,attr,omitempty"`
 }
 
 type Conference struct {
