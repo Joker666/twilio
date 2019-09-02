@@ -51,6 +51,7 @@ func (r *Response) Dial(dial *Dial, structs ...interface{}) error {
 			d.Action = s.Action
 			d.Method = s.Method
 			d.Record = s.Record
+			d.RecordingStatusCallback = s.RecordingStatusCallback
 			d.Number = s.Number
 		case Client, Conference, Number, Queue, Sip:
 			d.Nested = append(d.Nested, s)
